@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lodging Navbar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">MwaiYayi</div>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <button class="book-now"><a href="./booknow.html">Book Now</a></button>
+      </nav>      
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="video-section">
+    <video autoplay muted loop playsinline class="video-bg">
+      <source src="images/roompreview.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="overlay-content">
+      <h1>Experience Comfort & Luxury</h1>
+      <p>Take a glimpse at our cozy rooms and scenic views</p>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about-section">
+    <div class="about-header">
+      <h2>Our Story</h2>
+      <p>Rooted in nature, built with love.</p>
+    </div>
+
+    <div class="about-content">
+      <div class="about-text">
+        <h3>More Than Just a Stay</h3>
+        <p>
+          Nestled deep in the whispering pines, our lodge began as a family retreat —
+          a place to disconnect from the noise and reconnect with what truly matters.
+          Every beam, every rock, every path here holds a story... and we invite you to add yours.
+        </p>
+
+        <p>
+          Whether it's a quiet weekend with a book and a fire, a family adventure through the trails,
+          or a romantic escape under the stars — we’ve crafted a space that feels like coming home,
+          even if it's your first time here.
+        </p>
+      </div>
+
+      <div class="about-image">
+        <img src="./images/lodge-night.jpg" alt="Lodge at Night">
+        <div class="campfire-overlay">Beautiful Memories Await</div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="hero-section">
+    <div class="hero-image">
+      <img src="./images/heroroom.jpg" alt="Lodge View">
+    </div>
+    <div class="hero-text">
+      <h1>Your Escape, Redefined</h1>
+      <p>Discover tranquil stays, breathtaking views, and moments that last a lifetime.</p>
+      <a href="#rooms" class="hero-btn">Explore Rooms</a>
+    </div>
+  </section>
+  
+  <section id="rooms" class="rooms-section">
+    <h2 class="section-title">Our Signature Rooms</h2>
+    <p class="section-subtitle">Experience comfort, elegance, and a touch of nature in every stay.</p>
+  
+    <div class="rooms-grid">
+      <!-- Room Card 1 -->
+      <div class="room-card">
+        <img src="./images/room1.jpg" alt="room1" />
+        <div class="room-content">
+          <h3>Basic Suite</h3>
+          <p>Spacious suite with panoramic views, king-sized bed, and modern amenities.</p>
+          <button class="room-btn" onclick="openModal('modal1')">View Details</button>
+        </div>
+      </div>
+
+      <!-- Modal for Room 1 -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Basic Suite</h2>
+            <div class="price-badge glow">K400/night</div>
+            </div>
+        </div>
+  
+      <!-- Room Card 2 -->
+      <div class="room-card">
+        <img src="./images/room2.jpg" alt="lodge room2" />
+        <div class="room-content">
+          <h3>Deluxe Suite</h3>
+          <p>Warm rustic interiors perfect for peaceful nights surrounded by nature.</p>
+          <button class="room-btn" onclick="openModal('modal2')">View Details</button>
+        </div>
+      </div>
+
+      <!-- Modal for Room 2 -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Deluxe Suite</h2>
+            <div class="price-badge glow">K600/night</div>
+            </div>
+        </div>
+  
+      <!-- Room Card 3 -->
+      <div class="room-card">
+        <img src="./images/room3.jpg" alt="lodge room3" />
+        <div class="room-content">
+          <h3>Premium Suite</h3>
+          <p>Modern design with skylights and ambient lighting for a dreamlike retreat.</p>
+          <button class="room-btn" onclick="openModal('modal3')">View Details</button>
+        </div>
+      </div>
+
+      <!-- Modal for Room 3 -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Premium Suite</h2>
+            <div class="price-badge glow">K800/night</div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Amenities Section -->
+<section id="amenities" class="amenities-section">
+    <h2 class="section-title">Our Amenities</h2>
+    <div class="amenities-grid">
+      <div class="amenity-card">
+        <i class="fa fa-wifi"></i>
+        <h3>Free Wi-Fi</h3>
+        <p>Stay connected even in the wild.</p>
+      </div>
+      <div class="amenity-card">
+        <i class="fa fa-coffee"></i>
+        <h3>Complimentary Breakfast</h3>
+        <p>Enjoy a delicious local start to your day.</p>
+      </div>
+      <div class="amenity-card">
+        <i class="fa fa-spa"></i>
+        <h3>Outdoor Spa</h3>
+        <p>Relax under the stars in our open-air spa.</p>
+      </div>
+      <div class="amenity-card">
+        <i class="fa fa-fire"></i>
+        <h3>Fire Pit Nights</h3>
+        <p>Cozy up and share stories by the fire.</p>
+      </div>
+      <div class="amenity-card">
+        <i class="fa fa-hiking"></i>
+        <h3>Guided Hikes</h3>
+        <p>Explore hidden trails with our expert guides.</p>
+      </div>
+      <div class="amenity-card">
+        <i class="fa fa-bed"></i>
+        <h3>Cozy Beds</h3>
+        <p>Sleep like royalty with plush comfort.</p>
+      </div>
+      <div class="amenity-card">
+        <i class="fa fa-swimmer"></i>
+        <h3>Infinity Pool</h3>
+        <p>Take a dip with a view of the forest.</p>
+      </div>
+      <div class="amenity-card">
+        <i class="fa fa-couch"></i>
+        <h3>Rustic Lounge</h3>
+        <p>Sip and unwind in our nature-themed lounge.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Gallery Section -->
+<section id="gallery" class="gallery-section">
+    <h2 class="section-title">Our Gallery</h2>
+    <p class="gallery-subtitle">Step into the soul of nature — see what awaits you</p>
+    <div class="gallery-grid">
+      <!-- Repeat for each image -->
+      <div class="gallery-item" onclick="openLightbox('/images/gallery1.jpg')">
+        <img src="./images/gallery1.jpg" alt="Lodge View 1" />
+        <div class="overlay">
+          <p>Serene Lodge View</p>
+        </div>
+      </div>
+      <div class="gallery-item tall" onclick="openLightbox('/images/gallery2.jpg')">
+        <img src="./images/gallery2.jpg" alt="Lodge View 2" />
+        <div class="overlay">
+          <p>Mountain Escape</p>
+        </div>
+      </div>
+      <div class="gallery-item wide" onclick="openLightbox('/images/gallery3.jpg')">
+        <img src="./images/gallery3.jpg" alt="Lodge View 2" />
+        <div class="overlay">
+          <p>Mountain Escape</p>
+        </div>
+      </div>
+      <div class="gallery-item tall" onclick="openLightbox('/images/gallery4.avif')">
+        <img src="./images/gallery4.avif" alt="Lodge View 2" />
+        <div class="overlay">
+          <p>Mountain Escape</p>
+        </div>
+      </div>
+      <div class="gallery-item tall" onclick="openLightbox('/images/gallery5.jpg')">
+        <img src="./images/gallery5.jpg" alt="Lodge View 2" />
+        <div class="overlay">
+          <p>Mountain Escape</p>
+        </div>
+      </div>
+      <div class="gallery-item tall" onclick="openLightbox('/images/gallery6.avif')">
+        <img src="./images/gallery6.avif" alt="Lodge View 2" />
+        <div class="overlay">
+          <p>Mountain Escape</p>
+        </div>
+      </div>
+      <div class="gallery-item tall" onclick="openLightbox('/images/gallery7.jpg')">
+        <img src="./images/gallery7.jpg" alt="Lodge View 2" />
+        <div class="overlay">
+          <p>Mountain Escape</p>
+        </div>
+      </div>
+      <div class="gallery-item wide" onclick="openLightbox('/images/gallery8.jpg')">
+        <img src="./images/gallery8.jpg" alt="Lodge View 2" />
+        <div class="overlay">
+          <p>Mountain Escape</p>
+        </div>
+      </div>
+      <!-- Add others similarly -->
+    </div>
+  </section>
+  
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="Enlarged Lodge View" />
+  </div>
+
+  <!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <h2>Reach Out to the Lodge</h2>
+    <p>Whether you're booking a stay or just saying hi — we’d love to hear from you.</p>
+    <form id="contactForm">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Wanderer..." required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="you@forestmail.com" required />
+
+      <label for="message">Your Message</label>
+      <textarea id="message" rows="5" placeholder="Tell us your story..."></textarea>
+
+      <button type="submit" id="sendBtn">
+        <span>Send Message</span>
+        <span class="bird">🕊️</span>
+      </button>
+    </form>
+
+    <div class="campfire">
+      <div class="log left-log"></div>
+      <div class="log right-log"></div>
+      <div class="flame flame1"></div>
+      <div class="flame flame2"></div>
+      <div class="flame flame3"></div>
+    </div>
+    
+  </div>
+  <ul class="embers">
+    <li></li><li></li><li></li><li></li><li></li>
+  </ul>
+  
+</section>
+
+<!-- Footer -->
+<footer class="lodge-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3>MwaiYayi Lodge</h3>
+      <p>Where stories begin and time slows down.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Reach Us</h4>
+      <ul>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#booknow">Book Now</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Connect</h4>
+      <div class="social-icons">
+        <a href="#"><span><i class="fa-solid fa-tree"></i></span></a>
+        <a href="#"><span><i class="fa-solid fa-fire"></i></span></a>
+        <a href="#"><span><i class="fa-solid fa-dove"></i></span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; Designed and Maintained By:  Micheal Mwanza SIN: 2312313881</p>
+  </div>
+</footer>
+
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    });
+
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = "flex"; // <-- change "block" to "flex"
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = "none";
+    }
+
+  // Optional: close modal when clicking outside the modal content
+  window.onclick = function (event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  };
+  function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    img.src = src;
+    lightbox.style.display = 'flex';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+  </script>
+</body>
+</html>
